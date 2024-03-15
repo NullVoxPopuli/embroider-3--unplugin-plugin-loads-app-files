@@ -1,0 +1,24 @@
+{
+  "name": "build-plugin",
+  "version": "0.0.0",
+  "type": "module",
+  "keywords": [],
+  "exports": {
+    "./registry": {
+      "types": "./src/runtime/registry.d.ts",
+      "default": "./src/runtime/virtual.js"
+    },
+    "./webpack": {
+      "node": {
+        "import": "./src/webpack.js"
+      }
+    }
+  },
+  "files": [
+    "src"
+  ],
+  "dependencies": {
+    "common-tags": "^1.8.2",
+    "unplugin": "^1.10.0"
+  }
+}

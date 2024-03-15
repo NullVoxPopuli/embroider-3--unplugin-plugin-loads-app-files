@@ -1,3 +1,9 @@
+import * as virtualModule from 'build-plugin/registry';
+
+console.log(virtualModule, Object.keys(virtualModule));
+// sets window.myRegistry, so we can inspect
+virtualModule.setup();
+
 import Application from '@ember/application';
 import Resolver from 'ember-resolver';
 import loadInitializers from 'ember-load-initializers';

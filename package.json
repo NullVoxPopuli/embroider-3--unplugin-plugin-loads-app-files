@@ -77,5 +77,8 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "build-plugin": "workspace:*"
   }
 }
