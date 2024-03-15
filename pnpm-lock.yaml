@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  unplugin@1.10.0:
+    hash: 25pjvhmmdjfuzqmglujiamydkm
+    path: patches/unplugin@1.10.0.patch
+
 importers:
 
   .:
@@ -158,7 +163,7 @@ importers:
         version: 1.8.2
       unplugin:
         specifier: ^1.10.0
-        version: 1.10.0
+        version: 1.10.0(patch_hash=25pjvhmmdjfuzqmglujiamydkm)
 
 packages:
 
@@ -13195,7 +13200,7 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /unplugin@1.10.0:
+  /unplugin@1.10.0(patch_hash=25pjvhmmdjfuzqmglujiamydkm):
     resolution: {integrity: sha512-CuZtvvO8ua2Wl+9q2jEaqH6m3DoQ38N7pvBYQbbaeNlWGvK2l6GHiKi29aIHDPoSxdUzQ7Unevf1/ugil5X6Pg==}
     engines: {node: '>=14.0.0'}
     dependencies:
@@ -13204,6 +13209,7 @@ packages:
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.6.1
     dev: false
+    patched: true
 
   /unset-value@1.0.0:
     resolution: {integrity: sha512-PcA2tsuGSF9cnySLHTLSh2qrQiJ70mn+r+Glzxv2TWZblxsxCC52BDlZoPCsz7STd9pN7EZetkWZBAvk4cgZdQ==}
