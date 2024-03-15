@@ -80,5 +80,10 @@
   },
   "dependencies": {
     "build-plugin": "workspace:*"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "unplugin@1.10.0": "patches/unplugin@1.10.0.patch"
+    }
   }
 }

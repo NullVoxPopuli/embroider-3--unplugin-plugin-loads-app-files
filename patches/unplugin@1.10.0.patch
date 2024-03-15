@@ -1,0 +1,18 @@
+diff --git a/dist/index.mjs b/dist/index.mjs
+index eef923fa0f20e24570cb81f4ea0e62b3b1bd38b9..24e66c8e283ab82ab059ec013f39eaf0b10c98c1 100644
+--- a/dist/index.mjs
++++ b/dist/index.mjs
+@@ -1717,11 +1717,12 @@ var LOAD_LOADER2 = resolve5(
+   __dirname,
+   false ? "../../dist/webpack/loaders/load" : "webpack/loaders/load"
+ );
+-var VIRTUAL_MODULE_PREFIX2 = resolve5(process3.cwd(), "_virtual_");
+ function getWebpackPlugin(factory) {
+   return (userOptions) => {
+     return {
+       apply(compiler) {
++        var VIRTUAL_MODULE_PREFIX2 = resolve5(compiler.options.context ?? process3.cwd(), "_virtual_");
++
+         const injected = compiler.$unpluginContext || {};
+         compiler.$unpluginContext = injected;
+         const meta = {
